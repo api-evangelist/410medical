@@ -1,17 +1,40 @@
 aid: 410medical
 name: 410 Medical
-description: '410 Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  410 Medical, Inc. is a privately held medical device company headquartered in Durham,
+  North Carolina, founded in 2013 by pediatric intensivist Dr. Mark Piehl and named for the
+  pediatric septic shock guideline of four 10 ml/kg fluid boluses. It designs, engineers and
+  assembles the LifeFlow family of handheld rapid infusers — LifeFlow for crystalloid
+  resuscitation and LifeFlow PLUS for blood and blood components — which let a single
+  clinician deliver a unit of blood or 500 ml of fluid in under two minutes without a pump or
+  pressure bag. LifeFlow received FDA clearance in 2016 and is used by hospital emergency
+  departments, trauma centers, pediatric and obstetric units, EMS agencies, fire departments
+  and military and public safety teams for sepsis, trauma, hemorrhagic shock and postpartum
+  hemorrhage. 410 Medical is a physical medical device manufacturer: it publishes no public
+  API, developer portal, SDK, OpenAPI or any other machine-readable specification, and its
+  entire web surface is a WordPress marketing, clinical-evidence and training site.
+image: https://410medical.com/wp-content/uploads/2026/07/LifeFlow-O-1.png
 url: https://raw.githubusercontent.com/api-evangelist/410medical/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass-no-api-surface
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Medical Devices
+- Healthcare
+- MedTech
+- Emergency Medicine
+- Critical Care
+- Resuscitation
+- Emergency Medical Services
+- Blood Transfusion
+- Trauma
+- Pediatrics
+- Obstetrics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +42,75 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/410medical-domain-security.yml
 - type: Website
+  url: https://410medical.com/
+- type: About
+  url: https://410medical.com/410-medical/
+- type: Products
+  url: https://410medical.com/about/
+- type: Blog
+  url: https://410medical.com/blog/
+- type: BlogFeeds
+  url: https://410medical.com/feed/
+- type: News
+  url: https://410medical.com/news/
+- type: CaseStudies
+  url: https://410medical.com/case-study/
+- type: Training
+  url: https://410medical.com/training-videos/
+- type: Patents
+  url: https://410medical.com/patents/
+- type: Careers
+  url: https://410medical.com/careers/
+- type: ContactUs
+  url: https://410medical.com/contact/
+- type: Support
+  url: https://410medical.com/contact/
+- type: PrivacyPolicy
+  url: https://410medical.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/410-medical
+- type: Twitter
+  url: https://twitter.com/LifeFlow__
+- type: Facebook
+  url: https://www.facebook.com/LifeFlowRapidInfuser/
+- type: Instagram
+  url: https://www.instagram.com/lifeflow/
+- type: SecondaryMarket
   url: https://equityzen.com/company/410medical
+- type: LLMsTxt
+  url: llms/410medical-llms.txt
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    410 Medical manufactures a mechanical, single-use handheld infuser (LifeFlow / LifeFlow
+    PLUS) and its entire web presence is one WordPress marketing, clinical-evidence and
+    training site — every conventional developer host (api./developer./docs./status./portal./
+    dev./app./store..410medical.com) is NXDOMAIN, all fourteen named /.well-known/ and
+    APIs.json root paths 404 on both the apex and www hosts, and the only machine-readable
+    endpoint on the domain is the default WordPress core REST API at /wp-json/, whose
+    nineteen namespaces are WP core plus off-the-shelf plugins (Wordfence, AIOSEO,
+    Relevanssi, The Events Calendar, Redirection, Flywheel) with not one first-party
+    namespace, so it is CMS scaffolding rather than a product API.
+  evidence:
+  - url: https://410medical.com/openapi.json
+    status: 404
+  - url: https://410medical.com/.well-known/agent-card.json
+    status: 404
+  - url: https://410medical.com/.well-known/security.txt
+    status: 404
+  - url: https://410medical.com/apis.json
+    status: 404
+  - url: https://410medical.com/wp-json/
+    status: 200
+  - url: https://410medical.com/llms.txt
+    status: 200
+  checked: '2026-09-05'
