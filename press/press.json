@@ -1,0 +1,15 @@
+{
+ "repo": "410medical",
+ "feeds": [
+  {
+   "source": "https://410medical.com/news/",
+   "feed_url": "https://410medical.com/news/feed/",
+   "title": "News | LifeFlow",
+   "saved": 7,
+   "status": "ok"
+  }
+ ],
+ "fetched": "2026-09-19T18:48:13Z",
+ "release_count": 7,
+ "adopted": 0
+}
